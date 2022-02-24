@@ -1,0 +1,22 @@
+case 1 men styling tampilan web dengan javascript tradisional
+1.Tulis semua line code didalam tag <script></script> atau external script
+
+2.untuk menstyling dengan javascript maka perlu di buat dulu css yang dingin di gunakan di js nya
+  buat css code nya seperti biasa (boleh di assign ke html atau tidak).
+  jika tidak di assign ke html maka nanti akan di assign dengan javascript.
+
+3. di file js nya  pilih class css yang ingin digunakan dan tampung di variable
+   cth nya        const menuMobile = document.querySelector('.menu_mobile').
+
+4. buat fungsi javascript seperti biasa dengan logic kode terserah anda sesuai dengan yang dibutuhkan
+    cth  function toggleMenu() { 
+        coding nya disini
+    }
+
+ actualy sudah done... cuma terkadang untuk adding/remove class lewat javascript perlu sesuatu
+ yang akan mentrigger nya,..cth button,..jika di klik maka akan add/remove class.
+
+5. Untuk fungsi klik di javascript native TIDAK BISA PAKE onClick
+   melainkan harus pake addEventListener
+   cthnya :
+   menuItem.addEventListener('click', toggleMenu)

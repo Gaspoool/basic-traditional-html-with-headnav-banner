@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/headnav.css" />
+    <link rel="stylesheet" href="/css/footer.module.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    /> -->
+    <!-- untuk javascript buat sendiri external file (idupin js nya kalo mo pake) -->
+    <!-- <script type="text/javascript" src="/javascript/script.js"></script> -->
+
+    <title>Template</title>
+  </head>
+  <body>
+    <header>
+      <div style="position: relative;">
+        <nav class="nav_header">
+          <!--position header sudah absolute jadi bisa diganti warna backgroundnya -->
+          <div class="div_logo_container">
+            <div class="div_image_logo">
+              <img
+                src="https://res.cloudinary.com/tokyofoam-com/image/upload/v1644317354/logo-tokyofoam_xzpokn.png"
+                alt="logo"
+                width="100%"
+                height="100%"
+              />
+            </div>
+            <!-- <h2 style="text-align: center; color: #fff;">Logo</h2> -->
+          </div>
+
+          <!-- List Menu normal in Pc Desktop -->
+          <ul class="menu_header">
+            <li class="li_headnav"><a href="homepage.html">Homepage</a></li>
+            <li class="li_headnav"><a href="about.html">About</a></li>
+            <li class="li_headnav"><a href="profile.html">Profile</a></li>
+          </ul>
+
+          <!-- Hamburger Button With Menu in mobile device -->
+          <div class="show_menu_mobile">
+            <ul class="menu_mobile">
+              <li><a class="menuItemMobile" href="#">Home</a></li>
+              <li><a class="menuItemMobile" href="#">About</a></li>
+              <li><a class="menuItemMobile" href="#">Profile</a></li>
+            </ul>
+            <button class="hamburger">
+              <!-- material icons https://material.io/resources/icons/ -->
+              <i class="menuIcon material-icons" style="color: #fff;">menu</i>
+              <i class="closeIcon material-icons" style="color: #fff;">close</i>
+            </button>
+          </div>
+        </nav>
+        <div class="div_control_banner">
+          <div>
+            <h2 style="text-align: center;">Ini Buat Banner/Image Banner</h2>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- full_main_content ini div dengan lebar 100% jangan diapa2in -->
+      <div class="full_main_content">
+        <!-- first_content ini harus dipake di media querry buat content mobile -->
+
+        <div class="first_content">
+          <!--cth content 01 -->
+          <h2 style="text-align: center;">Template Full Responsive Flex</h2>
+          <p style="text-align: center;">
+            Headr dan Footer Jadi satu di file index.html
+          </p>
+        </div>
+
+        <!-- disini isi content 02 (jangan lupa di media query juga)-->
+      </div>
+    </main>
+
+    <footer>
+      <nav class="nav_footer">
+        <ul>
+          <li class="li_footer"><a href="detail.html">Detail</a></li>
+          <li class="li_footer"><a href="work.html">Work</a></li>
+          <li class="li_footer"><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </footer>
+
+    <!-- untuk penulisan javascript internal polosan ga pake src src segala -->
+    <script>
+      const menuMobile = document.querySelector('.menu_mobile')
+      const menuItems = document.querySelectorAll('.menuItemMobile')
+      const hamburger = document.querySelector('.hamburger')
+      const closeIcon = document.querySelector('.closeIcon')
+      const menuIcon = document.querySelector('.menuIcon')
+
+      function toggleMenu() {
+        if (menuMobile.classList.contains('showMenu')) {
+          menuMobile.classList.remove('showMenu')
+          closeIcon.style.display = 'none'
+          menuIcon.style.display = 'block'
+        } else {
+          menuMobile.classList.add('showMenu')
+          closeIcon.style.display = 'block'
+          menuIcon.style.display = 'none'
+        }
+      }
+
+      hamburger.addEventListener('click', toggleMenu)
+
+      menuItems.forEach(function (menuItem) {
+        menuItem.addEventListener('click', toggleMenu)
+      })
+    </script>
+  </body>
+</html>

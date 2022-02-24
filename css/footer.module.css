@@ -1,0 +1,33 @@
+.nav_footer {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0a0a23;
+}
+
+.li_footer {
+  list-style: none;
+  display: inline;
+}
+
+.li_footer a {
+  font-weight: 700;
+  margin: 0 25px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.li_footer a:hover {
+  padding-bottom: 5px;
+  box-shadow: inset 0 -2px 0 0 #fff;
+}
+
+/**********************************Tampilan dibawah 1500 px ********************************/
+@media only screen and (min-width: 1500px) {
+}
+
+/**********************************Tampilan 2K Or diatas 1900 px ********************************/
+@media only screen and (min-width: 1900px) {
+}
